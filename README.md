@@ -39,3 +39,36 @@ Problem Description
 	Your score is calculated as follows : 
 	(NxN - number of moves made to rescue the princess)/10, 
 	where N is the size of the grid (3x3 in the sample testcase).
+
+PUZZLE 1
+
+	n = size of matix { n is odd number which is greater or equal to 3 and less than 100 }
+	grid =  n x n matrix
+	*p = denote position of princess in matix
+	*m = denote position of bot in matix
+
+	n = 5
+	grid = [['-','-','-','-','_'],['-','-','-','-','-'],['-','-','m','-','-'],['-','-','-','-','-'],['p','-','-','-','-']]
+
+        Output:
+        RIGHT
+        RIGHT
+        UP
+        UP
+
+PUZZLE 2 - (Same as above parameters set randomly)
+
+	n = size of matix { n is odd number which is greater or equal to 3 and less than 100 }
+	grid =  n x n matrix
+	*p = denote position of princess in matix
+	*m = denote position of bot in matix
+
+	n = 5
+	grid = [['-','-','-','-','_'],['-','m','-','-','-'],['-','-','-','-','-'],['-','-','-','-','-'],['-','-','-','p','-']]
+
+        Output:
+	RIGHT
+	RIGHT
+	DOWN
+	DOWN
+	DOWN

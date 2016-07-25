@@ -8,6 +8,7 @@ def displayPathtoPrincess(n, grid)
   bot_moving_towards_princess(b_x, b_y, p_x, p_y)   	
 end
 
+#bot postion by cordinates X-axis and Y-axis
 def get_bot_position(n, grid)
   center_position = n/2
   raise "Position of bot is not in center" unless grid[center_position][center_position] == 'm'
@@ -23,6 +24,7 @@ def get_princess_corner(n, grid)
   raise "Oops bot not able to find princess in corners"
 end
 
+#moving towards princess
 def bot_moving_towards_princess(b_x, b_y, p_x, p_y)
   if b_x == p_x && b_y == p_y
     return
@@ -44,6 +46,7 @@ def bot_moving_towards_princess(b_x, b_y, p_x, p_y)
   end
 end
 
+#m denote bot and p denote princess inside grid
 n = 5
 grid = [['-','-','-','-','_'],['-','-','-','-','-'],['-','-','m','-','-'],['-','-','-','-','-'],['p','-','-','-','-']]
 

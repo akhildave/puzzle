@@ -8,6 +8,7 @@ def displayPathtoPrincess(n, grid)
   bot_moving_towards_princess(b_x, b_y, p_x, p_y)   	
 end
 
+#bot postion by cordinates X-axis and Y-axis
 def get_bot_position(grid)
   bot = []
   grid.each_index do |g|
@@ -33,6 +34,7 @@ def get_princess_position(grid)
   return princess[0], princess[1]
 end
 
+#moving towards princess
 def bot_moving_towards_princess(b_x, b_y, p_x, p_y)
   if b_x == p_x && b_y == p_y
     return
@@ -54,6 +56,7 @@ def bot_moving_towards_princess(b_x, b_y, p_x, p_y)
   end
 end
 
+#m denote bot and p denote princess inside grid
 n = 5
 grid = [['-','-','-','-','_'],['-','m','-','-','-'],['-','-','-','-','-'],['-','-','-','-','-'],['-','-','-','p','-']]
 

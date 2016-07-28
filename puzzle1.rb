@@ -4,7 +4,7 @@ def display_path_to_princess(size_grid, grid)
 
   bot_x = bot_y = get_bot_position(size_grid, grid)
   princess_x, princess_y = get_princess_corner(size_grid, grid)
-  bot_moving_towards_princess(bot_x, bot_y, princess_x, princess_y)
+  p bot_moving_towards_princess(bot_x, bot_y, princess_x, princess_y)
 end
 
 # bot postion by cordinates X-axis and Y-axis
@@ -25,7 +25,7 @@ end
 
 # moving towards princess and recursive call
 def bot_moving_towards_princess(bot_x, bot_y, princess_x, princess_y)
-  return if bot_x == princess_x && bot_y == princess_y
+  return true if bot_x == princess_x && bot_y == princess_y
   if bot_y < princess_y
     puts 'Right'
     bot_y += 1

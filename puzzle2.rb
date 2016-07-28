@@ -2,13 +2,13 @@ def display_path_to_princess(size_grid, grid)
   raise 'Number should be an odd number' if size_grid.even?
   raise 'Number should be between (3 >= n < 100)' if size_grid < 3 || size_grid > 100
 
-  bot_x, bot_y = get_bot_position(grid)
+  bot_x, bot_y = bot_position(grid)
   princess_x, princess_y = get_princess_position(grid)
-  bot_moving_towards_princess(bot_x, bot_y, princess_x, princess_y)
+  bot_getting_princess(bot_x, bot_y, princess_x, princess_y)
 end
 
 # bot postion by cordinates X-axis and Y-axis
-def get_bot_position(grid)
+def bot_position(grid)
   grid.each_index do |x|
     @row = x
     @column = grid[x].index 'm'
@@ -30,8 +30,8 @@ def get_princess_position(grid)
 end
 
 # moving towards princess and recursive call
-def bot_moving_towards_princess(bot_x, bot_y, princess_x, princess_y)
-  return if bot_x == princess_x && bot_y == princess_y
+def bot_getting_princess(bot_x, bot_y, princess_x, princess_y)
+  return true if bot_x == princess_x && bot_y == princess_y
   if bot_y < princess_y
     puts 'Right'
     bot_y += 1
@@ -45,7 +45,7 @@ def bot_moving_towards_princess(bot_x, bot_y, princess_x, princess_y)
     puts 'UP'
     bot_x -= 1
   end
-  bot_moving_towards_princess(bot_x, bot_y, princess_x, princess_y)
+  bot_getting_princess(bot_x, bot_y, princess_x, princess_y)
 end
 
 # m denote bot and p denote princess inside grid
